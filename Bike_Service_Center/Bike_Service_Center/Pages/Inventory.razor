@@ -1,0 +1,148 @@
+﻿@page "/inventoryinfo"
+@using Bike_Service_Center.Data;
+
+
+
+<nav class="navbar navbar-light bg-light justify-content-between">
+    <h1 class="navbar-brand mb-0 h1">Stock Avaiable</h1>
+    <button class="btn btn-primary" type="button" @onclick="OpenAddUserDialog">
+        <span class="oi oi-plus" /> Taken Out
+    </button>
+</nav>
+
+<h1>Month @now.Day, @now.ToString("MMMM")</h1> 
+@for (int i = 1; i <= 1; i++)
+{
+<table class="table">
+    <thead>
+        <tr>
+            <th>Items</th>
+            <th>Quantity</th>
+            <th>Approved By</th>
+            <th>Taken By</th>
+            <th>Date taken Out</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var invent in inventory)
+        {
+                if (invent.Date_taken_out.Month == i)
+                {
+            <tr>
+                <td>@invent.Item</td>
+                <td>@invent.Quantity</td>
+                <td>@invent.Approved_by</td>
+                <td>@invent.Taken_by</td>
+                <td>@invent.Date_taken_out.ToString("d")</td>
+                
+            </tr>
+                }
+        }
+    </tbody>
+</table>
+}
+
+@if (_showEditTodoDialog)
+{
+    @if (@*DateTime.Now.Hour >= 23 && DateTime.Now.Hour < 1 &&*@DateTime.Now.DayOfWeek >= DayOfWeek.Monday && DateTime.Now.DayOfWeek <= DayOfWeek.Friday)
+    {
+    <ModalDialog Title="@_dialogTitle" OnClose="@OnEditTodoDialogClose" OkLabel="@_dialogOkLabel">
+        <form>
+            <h5>Item Name</h5>
+                <div class="form-floating mb-3">
+                    <input type="text" class="form-control" @bind="_InventoryModel.Item" placeholder="Item Name" />
+                    <label for="floating">Item Name</label>
+                </div>
+            <div class="form-floating mb-3">
+                <input type="text" class="form-control" @bind="_InventoryModel.Quantity" placeholder="Quantity" />
+                <label for="floating">Quantity</label>
+            </div>
+            <div class="form-floating mb-3">
+                <input type="text" class="form-control" @bind="_InventoryModel.Approved_by" placeholder="Approvedby" />
+                <label for="floatingInput">Approved By</label>
+            </div>
+            <div class="form-floating mb-3">
+                <input type="text" class="form-control" @bind="_InventoryModel.Taken_by" placeholder="taken by" />
+                <label for="floatingPassword">Taken By</label>
+            </div>
+            <div class="form-floating mb-3">
+                <input type="text" class="form-control username" @bind="_InventoryModel.Date_taken_out" placeholder="Date taken Out" />
+                <label for="floatingInput">Date of Taken</label>
+            </div>
+        </form>
+
+        @if (!string.IsNullOrEmpty(_editTodoErrorMessage))
+        {
+            <AlertMessage Type="danger" Message="@_editTodoErrorMessage" />
+        }
+    </ModalDialog>
+    }
+    else
+        {
+            <AlertMessage Type="info" Message="Can't take item  now. Please try later on between 9:00am to 4:00pm" />
+        }
+    
+}
+
+
+@code {
+    [CascadingParameter]
+    private GlobalState _globalState { get; set; }
+    private bool _showEditTodoDialog { get; set; }
+    private bool _showDeleteTodoDialog { get; set; }
+    private List<InventoryModel> _inventory { get; set; }
+    private InventoryModel _deleteinventory { get; set; }
+    private string _addUserErrorMessage { get; set; }
+    private string _deleteTodoErrorMessage { get; set; }
+    private string _editTodoErrorMessage { get; set; }
+    private string _dialogTitle { get; set; }
+    private string _dialogOkLabel { get; set; }
+    private InventoryModel _InventoryModel { get; set; } 
+    private List<ItemModel> availabe { get; set; }
+
+    DateTime now = DateTime.Now;
+    protected override void OnInitialized()
+    {
+        availabe = ItemService.ReadData();
+        inventory = InventoryService.ReadData();
+    }
+
+    InventoryModel model = new InventoryModel();
+
+    private List<InventoryModel> inventory { get; set; }
+
+ 
+    private void OpenAddUserDialog()
+    {
+        _dialogTitle = "Item Taken Out";
+        _dialogOkLabel = "Add";
+        _InventoryModel = new InventoryModel();
+        _InventoryModel.Id = Guid.Empty;
+        _showEditTodoDialog = true;
+    }
+    private void OnEditTodoDialogClose(bool isCancel)
+    {
+        if (isCancel)
+        {
+            _showEditTodoDialog = false;
+        }
+        else
+        {
+            try
+            {
+                _editTodoErrorMessage = "";
+                if (_InventoryModel.Id == Guid.Empty)
+                {
+                    inventory = InventoryService.WriteData(_InventoryModel.Item, _InventoryModel.Quantity, _InventoryModel.Approved_by, _InventoryModel.Taken_by);
+                    ItemService.Update(_InventoryModel.Item, DateTime.Now);
+
+                }
+                _showEditTodoDialog = false;
+            }
+            catch (Exception e)
+            {
+                _editTodoErrorMessage = e.Message;
+            }
+        }
+    }
+}

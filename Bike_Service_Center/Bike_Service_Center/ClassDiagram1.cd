@@ -1,0 +1,102 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Bike_Service_Center.Data.GlobalState" Collapsed="true">
+    <Position X="2" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Data\GlobalState.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Bike_Service_Center.Data.InventoryModel" Collapsed="true">
+    <Position X="9.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAiAAAAAAAAEAAAAAAAAAAEAAAAAAAAIAAAgAAAAAA=</HashCode>
+      <FileName>Data\InventoryModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Bike_Service_Center.Data.InventoryService" Collapsed="true">
+    <Position X="11.25" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAABAAABAAAAAAEAAAEgAAAAAAAAAAABAAA=</HashCode>
+      <FileName>Data\InventoryService.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Bike_Service_Center.Data.ItemModel" Collapsed="true">
+    <Position X="2" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAQAgAAAAAAAAAAQAAAAAAAABAAAAgAAAAAA=</HashCode>
+      <FileName>Data\ItemModel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Bike_Service_Center.Data.ItemService">
+    <Position X="8.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAABAAABAAAAAAAAAAEgAAAAAAAAAAABAIA=</HashCode>
+      <FileName>Data\ItemService.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Bike_Service_Center.Data.User" Collapsed="true">
+    <Position X="2" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AACCAAAAAAAAAAAAESAAAEAAAAAAAAAAAAAAAAAAAAE=</HashCode>
+      <FileName>Data\User.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Bike_Service_Center.Data.UsersService">
+    <Position X="5.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAIgAABAAAAAEAAAAEAAEAAAgAQAAABAIA=</HashCode>
+      <FileName>Data\UsersService.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Bike_Service_Center.Data.Utils">
+    <Position X="13.5" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQQABAgAAAAACAAAAAEAAAAAAAAEAAAgAAAAAAAAAAA=</HashCode>
+      <FileName>Data\Utils.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Bike_Service_Center.MainActivity">
+    <Position X="2" Y="5.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Platforms\Android\MainActivity.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Bike_Service_Center.MainApplication">
+    <Position X="12.25" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Platforms\Android\MainApplication.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Bike_Service_Center.App" Collapsed="true">
+    <Position X="2" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>App.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Bike_Service_Center.MainPage" Collapsed="true">
+    <Position X="2" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>MainPage.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Bike_Service_Center.MauiProgram">
+    <Position X="2" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>MauiProgram.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Enum Name="Bike_Service_Center.Data.Role">
+    <Position X="9.75" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAABAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Data\Role.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

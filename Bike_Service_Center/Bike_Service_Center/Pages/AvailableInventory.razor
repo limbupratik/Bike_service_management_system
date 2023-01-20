@@ -1,0 +1,50 @@
+﻿@page "/available"
+<h3>Stock</h3>
+@using Bike_Service_Center.Data;
+
+
+<text>Available Items</text>
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">Item</th>
+            <th scope="col">Available Quantity</th>
+            <th scope="col">Last Taken Out On</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in availabe)
+        {
+            if (item.Quantity > 0)
+            {
+                <tr>
+                    <th scope="row">@ItemService.GetById(item.Id).Name</th>
+                    <th>@item.Quantity</th>
+                    @{
+                        if (item.Date == DateTime.MinValue)
+                        {
+                            <th>............</th>
+                        }
+                        else
+                        {
+                            <th>@item.Date.ToString("d")</th>
+                        }
+                    }
+                </tr>
+            }
+        }
+    </tbody>
+</table>
+
+@code {
+
+    private List<ItemModel> availabe { get; set; }
+
+
+    protected override void OnInitialized()
+    {
+        availabe = ItemService.ReadData();
+    }
+
+}
+

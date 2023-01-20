@@ -1,0 +1,203 @@
+﻿@page "/iteminfo"
+@using Bike_Service_Center.Data;
+
+
+
+<nav class="navbar navbar-light bg-light justify-content-between">
+    <h1 class="navbar-brand mb-0 h1">Items</h1>
+    <button class="btn btn-primary" type="button" @onclick="OpenAddUserDialog">
+        <span class="oi oi-plus" /> Add
+    </button>
+</nav>
+<table class="table">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Description</th>
+            <th>Quantity</th>
+            <th>Price</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var ite in item)
+        {
+            <tr>
+                <td>@ite.Name</td>
+                <td>@ite.Description</td>
+                <td>@ite.Quantity</td>
+                <td>@ite.Price</td>
+                <td>
+                    <button class="btn btn-outline-secondary"
+                        @onclick="()=>OpenEditTodoDialog(ite)" type="button">
+                        <span class="oi oi-pencil" /> Edit
+                    </button>
+                    <button class="btn btn-outline-danger" @onclick="()=>OpenDeleteTodoDialog(ite)" type="button">
+                        <span class="oi oi-delete" /> Delete
+                    </button>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<style>
+    table {
+        border-collapse: collapse;
+        width: 100%;
+        border: 2px solid #021c24;
+    }
+
+    td {
+        border: 2px solid #021c24;
+        text-align: left;
+        padding: 8px;
+    }
+
+    th {
+        border: 2px solid #021c24;
+        text-align: left;
+        padding: 7px;   
+        
+    }
+ 
+</style>
+
+@if (_showEditTodoDialog)
+{
+    <ModalDialog Title="@_dialogTitle" OnClose="@OnEditTodoDialogClose" OkLabel="@_dialogOkLabel">
+        <form>
+            <div class="form-floating mb-3">
+                <input type="text" required class="form-control username" @bind="_ItemModel.Name" placeholder="UserName" />
+                @**@
+                <label for="floatingInput" >Name</label>
+            </div>
+            <div class="form-floating mb-3">
+                <input type="text" class="form-control" @bind="_ItemModel.Description" placeholder="Desc..." />
+                <label for="floatingPassword" required>Description</label>
+            </div>
+            <div class="form-floating mb-3">
+                <input type="text" class="form-control" @bind="_ItemModel.Quantity" placeholder="Qty"/>
+                <label for="floatingInput" required >Quantity </label>
+            </div>
+            <div class="form-floating mb-3">
+                <input type="text" class="form-control" @bind="_ItemModel.Price" placeholder="MarkedPrice"/>
+                <label for="floatingPassword" required>Price</label>
+            </div>
+        </form>
+
+        @if (!string.IsNullOrEmpty(_editTodoErrorMessage))
+        {
+            <AlertMessage Type="danger" Message="@_editTodoErrorMessage" />
+        }
+    </ModalDialog>
+}
+@if (_showDeleteTodoDialog)
+{
+    <ModalDialog Title="Delete Todo" OnClose="@OnDeleteTodoDialogClose" OkLabel="Confirm">
+        <p>Are you sure you want to delete <strong></strong>_deleteItem.Name?</p>
+        @if (!string.IsNullOrEmpty(_deleteTodoErrorMessage))
+        {
+            <AlertMessage Type="danger" Message="@_deleteTodoErrorMessage" />
+        }
+    </ModalDialog>
+}
+
+@code {
+    [CascadingParameter]
+    private GlobalState _globalState { get; set; }
+    private bool _showEditTodoDialog { get; set; }
+    private bool _showDeleteTodoDialog { get; set; }
+    private List<ItemModel> _item { get; set; }
+    private ItemModel _deleteItem { get; set; }
+    private string _addUserErrorMessage { get; set; }
+    private string _deleteTodoErrorMessage { get; set; }
+    private string _editTodoErrorMessage { get; set; }
+    private string _dialogTitle { get; set; }
+    private string _dialogOkLabel { get; set; }
+    private ItemModel _ItemModel { get; set; }
+
+    ItemModel model = new ItemModel();
+
+    private List<ItemModel> item { get; set; }
+
+    protected override void OnInitialized()
+    {
+        item = ItemService.ReadData();
+    }
+
+    private void OpenAddUserDialog()
+    {
+        _dialogTitle = "Add Item";
+        _dialogOkLabel = "Add";
+        _ItemModel = new ItemModel();
+        _ItemModel.Id = Guid.Empty;
+        _showEditTodoDialog = true;
+    }
+    private void OpenEditTodoDialog(ItemModel editItem)
+    {
+        _dialogTitle = "Edit Item";
+        _dialogOkLabel = "Save";
+        _ItemModel = editItem;
+        _showEditTodoDialog = true;
+
+    }
+    private void OnEditTodoDialogClose(bool isCancel)
+    {
+        if (isCancel)
+        {
+            _showEditTodoDialog = false;
+        }
+        else
+        {
+            try
+            {
+                _editTodoErrorMessage = "";
+                if (_ItemModel.Id == Guid.Empty)
+                {
+                    _item = ItemService.WriteData(_ItemModel.Name, _ItemModel.Description, _ItemModel.Quantity, _ItemModel.Price);
+
+                }
+                else
+                {
+                    _item = ItemService.Update(_ItemModel.Id, _ItemModel.Name, _ItemModel.Description, _ItemModel.Quantity, _ItemModel.Price);
+
+                }
+                _showEditTodoDialog = false;
+            }
+            catch (Exception e)
+            {
+                _editTodoErrorMessage = e.Message;
+            }
+        }
+    }
+
+    private void OpenDeleteTodoDialog(ItemModel ItemModel)
+    {
+        _deleteItem = ItemModel;
+        _showDeleteTodoDialog = true;
+    }
+    private void OnDeleteTodoDialogClose(bool isCancel)
+    {
+        if (isCancel)
+        {
+            _showDeleteTodoDialog = false;
+            _deleteItem = null;
+        }
+        else
+        {
+            try
+            {
+                _deleteTodoErrorMessage = "";
+                _item = ItemService.Delete(_deleteItem.Id);
+                _showDeleteTodoDialog = false;
+                _deleteItem = null;
+            }
+            catch (Exception e)
+            {
+                _deleteTodoErrorMessage = e.Message;
+            }
+        }
+    }
+
+}

@@ -1,0 +1,85 @@
+﻿@page "/dashboard"
+@using Bike_Service_Center.Data;
+@using MudBlazor
+
+<h1>Dashboard</h1>
+<div class="container">
+	<div class="row d-flex">
+		<div class="col-6">
+			
+<MudChart ChartType="ChartType.Bar" ChartSeries="@Series" XAxisLabels="@_xAxixLables" Width="100%" Height="350px">
+    <CustomGraphics>
+        <style>
+            .title {
+                font: italic 40px Helvetica;
+                fill: rgb(62,44,221);
+            }
+        </style>
+        <text x="105" y="50" class="title">Add item chart</text>
+    </CustomGraphics>
+</MudChart>
+
+@code {
+    private List<InventoryModel> inv_items { get; set; }
+    private List<ItemModel> item { get; set; }
+    private List<double> removedquantity { get; set; } = new List<double> { };
+    private List<string> removedname = new List<string>();
+    private string[] _xAxixLables = { };
+    private ChartSeries _chartSeries = new ChartSeries();
+    private List<ChartSeries> Series = new List<ChartSeries>();
+      private List<ItemModel> availabe { get; set; }
+
+
+    protected override void OnInitialized()
+    {
+        inv_items = InventoryService.ReadData();
+        item = ItemService.ReadData();
+        availabe = ItemService.ReadData();
+        foreach (var item in inv_items)
+        {
+            removedquantity.Add(item.Quantity);
+            removedname.Add(item.Item);
+        }
+        _xAxixLables = removedname.ToArray();
+        Series.Add(new ChartSeries() { Name = "", Data = removedquantity.ToArray() });
+    }
+
+}
+		</div>
+        <div class="col-5">
+            <h5>Avaiable Item in stock</h5>
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">Item</th>
+                        <th scope="col">Available Quantity</th>
+                        <th scope="col">Last Taken Out On</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in availabe)
+                    {
+                        if (item.Quantity > 0)
+                        {
+                            <tr>
+                                <th scope="row">@ItemService.GetById(item.Id).Name</th>
+                                <th>@item.Quantity</th>
+                                @{
+                                    if (item.Date == DateTime.MinValue)
+                                    {
+                                        <th>............</th>
+                                    }
+                                    else
+                                    {
+                                        <th>@item.Date.ToString("d")</th>
+                                    }
+                                }
+                            </tr>
+                        }
+                    }
+                </tbody>
+            </table>
+
+        </div>
+	</div>
+</div>

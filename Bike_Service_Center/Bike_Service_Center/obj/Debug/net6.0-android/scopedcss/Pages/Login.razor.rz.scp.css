@@ -1,0 +1,35 @@
+
+.login-body[b-iks7oi9bpb] {
+    display: flex;
+    align-items: center;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    height: calc(100vh - 250px);
+}
+
+.form-login[b-iks7oi9bpb] {
+    width: 100%;
+    max-width: 330px;
+    padding: 15px;
+    margin: auto;
+}
+
+.form-login .form-floating:focus-within[b-iks7oi9bpb] {
+    z-index: 2;
+}
+
+.form-login .username[b-iks7oi9bpb] {
+    margin-bottom: -1px;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+.form-login .password[b-iks7oi9bpb] {
+    margin-bottom: 10px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
+.alert-msg[b-iks7oi9bpb]{
+    background-color:coral;
+    color:white;
+}

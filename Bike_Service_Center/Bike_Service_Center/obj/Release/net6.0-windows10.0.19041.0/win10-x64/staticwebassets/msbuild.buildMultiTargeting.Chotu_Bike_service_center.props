@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\Chotu_Bike_service_center.props" />
+</Project>

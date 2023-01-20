@@ -1,0 +1,89 @@
+{
+  "Files": [
+    {
+      "Id": "F:\\Application Developement Coursework\\Bike_Service_Center\\Bike_Service_Center\\Bike_Service_Center\\obj\\Release\\net6.0-windows10.0.19041.0\\win10-x64\\scopedcss\\bundle\\Bike_Service_Center.styles.css",
+      "PackagePath": "staticwebassets\\Bike_Service_Center.styles.css"
+    },
+    {
+      "Id": "F:\\Application Developement Coursework\\Bike_Service_Center\\Bike_Service_Center\\Bike_Service_Center\\wwwroot\\Images\\logo.png",
+      "PackagePath": "staticwebassets\\Images\\logo.png"
+    },
+    {
+      "Id": "F:\\Application Developement Coursework\\Bike_Service_Center\\Bike_Service_Center\\Bike_Service_Center\\wwwroot\\Images\\logo2.png",
+      "PackagePath": "staticwebassets\\Images\\logo2.png"
+    },
+    {
+      "Id": "F:\\Application Developement Coursework\\Bike_Service_Center\\Bike_Service_Center\\Bike_Service_Center\\wwwroot\\css\\app.css",
+      "PackagePath": "staticwebassets\\css\\app.css"
+    },
+    {
+      "Id": "F:\\Application Developement Coursework\\Bike_Service_Center\\Bike_Service_Center\\Bike_Service_Center\\wwwroot\\css\\bootstrap\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\css\\bootstrap\\bootstrap.min.css"
+    },
+    {
+      "Id": "F:\\Application Developement Coursework\\Bike_Service_Center\\Bike_Service_Center\\Bike_Service_Center\\wwwroot\\css\\bootstrap\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\css\\bootstrap\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "F:\\Application Developement Coursework\\Bike_Service_Center\\Bike_Service_Center\\Bike_Service_Center\\wwwroot\\css\\open-iconic\\FONT-LICENSE",
+      "PackagePath": "staticwebassets\\css\\open-iconic"
+    },
+    {
+      "Id": "F:\\Application Developement Coursework\\Bike_Service_Center\\Bike_Service_Center\\Bike_Service_Center\\wwwroot\\css\\open-iconic\\ICON-LICENSE",
+      "PackagePath": "staticwebassets\\css\\open-iconic"
+    },
+    {
+      "Id": "F:\\Application Developement Coursework\\Bike_Service_Center\\Bike_Service_Center\\Bike_Service_Center\\wwwroot\\css\\open-iconic\\README.md",
+      "PackagePath": "staticwebassets\\css\\open-iconic\\README.md"
+    },
+    {
+      "Id": "F:\\Application Developement Coursework\\Bike_Service_Center\\Bike_Service_Center\\Bike_Service_Center\\wwwroot\\css\\open-iconic\\font\\css\\open-iconic-bootstrap.min.css",
+      "PackagePath": "staticwebassets\\css\\open-iconic\\font\\css\\open-iconic-bootstrap.min.css"
+    },
+    {
+      "Id": "F:\\Application Developement Coursework\\Bike_Service_Center\\Bike_Service_Center\\Bike_Service_Center\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.eot",
+      "PackagePath": "staticwebassets\\css\\open-iconic\\font\\fonts\\open-iconic.eot"
+    },
+    {
+      "Id": "F:\\Application Developement Coursework\\Bike_Service_Center\\Bike_Service_Center\\Bike_Service_Center\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.otf",
+      "PackagePath": "staticwebassets\\css\\open-iconic\\font\\fonts\\open-iconic.otf"
+    },
+    {
+      "Id": "F:\\Application Developement Coursework\\Bike_Service_Center\\Bike_Service_Center\\Bike_Service_Center\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.svg",
+      "PackagePath": "staticwebassets\\css\\open-iconic\\font\\fonts\\open-iconic.svg"
+    },
+    {
+      "Id": "F:\\Application Developement Coursework\\Bike_Service_Center\\Bike_Service_Center\\Bike_Service_Center\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.ttf",
+      "PackagePath": "staticwebassets\\css\\open-iconic\\font\\fonts\\open-iconic.ttf"
+    },
+    {
+      "Id": "F:\\Application Developement Coursework\\Bike_Service_Center\\Bike_Service_Center\\Bike_Service_Center\\wwwroot\\css\\open-iconic\\font\\fonts\\open-iconic.woff",
+      "PackagePath": "staticwebassets\\css\\open-iconic\\font\\fonts\\open-iconic.woff"
+    },
+    {
+      "Id": "F:\\Application Developement Coursework\\Bike_Service_Center\\Bike_Service_Center\\Bike_Service_Center\\wwwroot\\favicon.ico",
+      "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "F:\\Application Developement Coursework\\Bike_Service_Center\\Bike_Service_Center\\Bike_Service_Center\\wwwroot\\index.html",
+      "PackagePath": "staticwebassets\\index.html"
+    },
+    {
+      "Id": "obj\\Release\\net6.0-windows10.0.19041.0\\win10-x64\\staticwebassets\\msbuild.Bike_Service_Center.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Release\\net6.0-windows10.0.19041.0\\win10-x64\\staticwebassets\\msbuild.build.Bike_Service_Center.props",
+      "PackagePath": "build\\Bike_Service_Center.props"
+    },
+    {
+      "Id": "obj\\Release\\net6.0-windows10.0.19041.0\\win10-x64\\staticwebassets\\msbuild.buildMultiTargeting.Bike_Service_Center.props",
+      "PackagePath": "buildMultiTargeting\\Bike_Service_Center.props"
+    },
+    {
+      "Id": "obj\\Release\\net6.0-windows10.0.19041.0\\win10-x64\\staticwebassets\\msbuild.buildTransitive.Bike_Service_Center.props",
+      "PackagePath": "buildTransitive\\Bike_Service_Center.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

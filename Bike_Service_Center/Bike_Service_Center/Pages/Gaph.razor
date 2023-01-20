@@ -1,0 +1,54 @@
+﻿<h3>Item and sales bar chart</h3>
+@page "/graph"
+@using Bike_Service_Center.Data;
+@using MudBlazor
+
+<style>
+    .col-12 {
+        box-shadow: 1px 1px 10px black;
+        padding-bottom:4px;
+    }
+</style>
+
+<div class="container">
+    <div class="col-12">
+	<MudChart ChartType="ChartType.Bar" ChartSeries="@Series" XAxisLabels="@_xAxixLables" Width="100%" Height="350px">
+		<CustomGraphics>
+			<style>
+				.title {
+					font: italic 40px Helvetica;
+					fill: rgb(62,44,221);
+				}
+			</style>
+			<text x="105" y="70" class=""> items and sales</text>
+		</CustomGraphics>
+	</MudChart>
+</div>
+</div>
+
+@code {
+    private List<InventoryModel> inv_items { get; set; }
+    private List<ItemModel> item { get; set; }
+    private List<double> removedquantity { get; set; } = new List<double> { };
+    private List<string> removedname = new List<string>();
+    private string[] _xAxixLables = { };
+    private ChartSeries _chartSeries = new ChartSeries();
+    private List<ChartSeries> Series = new List<ChartSeries>();
+
+    protected override void OnInitialized()
+    {
+        inv_items = InventoryService.ReadData();
+        item = ItemService.ReadData();
+        foreach (var item in inv_items)
+        {
+            removedquantity.Add(item.Quantity);
+            removedname.Add(item.Item);
+        }
+        _xAxixLables = removedname.ToArray();
+        Series.Add(new ChartSeries() { Name = "", Data = removedquantity.ToArray() });
+    }
+
+}
+@code {
+
+}

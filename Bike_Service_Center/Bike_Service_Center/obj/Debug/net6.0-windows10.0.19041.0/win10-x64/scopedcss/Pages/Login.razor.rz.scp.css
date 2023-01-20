@@ -1,0 +1,69 @@
+
+.login-body[b-iks7oi9bpb] {
+    display: flex;
+    align-items: center;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    height: calc(100vh - 150px);
+}
+
+.row[b-iks7oi9bpb] {
+    box-shadow: 1px 1px 10px black;
+    width: 420px;
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.col-4[b-iks7oi9bpb] {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+strong[b-iks7oi9bpb] {
+    text-decoration: underline;
+}
+
+.col[b-iks7oi9bpb] {
+    position: absolute;
+    align-items: center;
+    padding-left: 100px;
+}
+
+p[b-iks7oi9bpb] {
+    padding-bottom: 40px;
+    padding-top: 20px;
+}
+
+.form-login[b-iks7oi9bpb] {
+    width: 100%;
+    max-width: 330px;
+    padding: 15px;
+    margin: auto;
+    display: flex;
+}
+
+    .form-login .form-floating:focus-within[b-iks7oi9bpb] {
+        z-index: 2;
+    }
+
+    .form-login .username[b-iks7oi9bpb] {
+        margin-bottom: -1px;
+        border-bottom-right-radius: 0;
+        border-bottom-left-radius: 0;
+    }
+
+
+    .form-login .password[b-iks7oi9bpb] {
+        margin-bottom: 10px;
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+    }
+
+.alert-msg[b-iks7oi9bpb] {
+    background-color: RGB(190, 235, 206);
+    padding: 10px;
+    color: black;
+}

@@ -1,0 +1,90 @@
+﻿@using Bike_Service_Center.Data;
+<div class="sidebar">
+<div class="top-row navbar ">
+	<div class="container-fluid">
+        <div class="row d-flex">
+            <div class="col">
+                <img src="images/logo2.png"  height="100">
+            </div>
+        </div>
+		
+	</div>
+</div>
+
+
+<div class='@(_collapseNavMenu ? "collapse" : "")' @onclick="ToggleNavMenu">
+    <nav class="flex-column">
+        <div class="nav-item px-3"><h5 class="text-light">Welcome <strong>@Username</strong>!</h5></div>
+        <div class="nav-item px-3">
+            <NavLink class="nav-link" href="dashboard">
+                <span class="oi oi-list-rich" /> Home
+            </NavLink>
+        </div>
+            @if (UserRole == Role.Admin)
+            {
+                <div class="nav-item px-3">
+                    <NavLink class="nav-link" href="users">
+                    <span class="oi oi-person" /> Users
+                </NavLink>
+            </div>
+        }
+        <div class="nav-item px-3">
+            <NavLink class="nav-link" href="iteminfo">
+                <span class="oi oi-wrench" /> Add Item
+            </NavLink>
+        </div>
+        <div class="nav-item px-3">
+            <NavLink class="nav-link" href="inventoryinfo">
+                <span class="oi oi-home" /> Item Out
+            </NavLink>
+        </div>
+        <div class="nav-item px-3">
+            <NavLink class="nav-link" href="available">
+                <span class="oi oi-home" /> Stock
+            </NavLink>
+        </div>
+        <div class="nav-item px-3">
+            <NavLink class="nav-link" href="graph">
+                <span class="oi oi-home" /> Chart
+            </NavLink>
+        </div>
+        <div class="nav-item px-3">
+            <NavLink class="nav-link" href="change-password">
+                <span class="oi oi-key" /> Change Password
+            </NavLink>
+        </div>
+        <div class="nav-item px-3">
+            <NavLink class="nav-link text-danger" role="button" @onclick="LogoutHandler">
+                <span class="oi oi-account-logout" /> Logout
+            </NavLink>
+        </div>
+    </nav>
+</div>
+</div>
+
+@*<div class="@NavMenuCssClass" @onclick="ToggleNavMenu">
+	<nav class="flex-column">
+		<div class="nav-item px-3">
+			<NavLink class="nav-link" href="" Match="NavLinkMatch.All">
+				<span class="oi oi-home" aria-hidden="true"></span> Home
+			</NavLink>
+		</div>
+
+	</nav>
+</div>*@
+
+@code {
+    [Parameter]
+    public string Username { get; set; }
+    [Parameter]
+    public Role UserRole { get; set; }
+    [Parameter]
+    public EventCallback LogoutHandler { get; set; }
+
+    private bool _collapseNavMenu { get; set; } = true;
+
+    private void ToggleNavMenu()
+    {
+        _collapseNavMenu = !_collapseNavMenu;
+    }
+}
