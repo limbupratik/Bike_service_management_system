@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "xJn91gCj4tHhx2fy3M3Xw3Ddd3zBdITMgPBXwxQBCTvLEsjLBTv7T9ddFGoNiN22j523IM2ovtvAfq+96Jxjmg==",
+  "dgSpecHash": "LN5xs2fHW6ClNlBGZXlZUQsjxTX/IRucSIUdwa5YR4Za0xvw80gSY3rOVLy5cQ53vqO+u4xJkZ+d4SSWoTEhVw==",
   "success": true,
-  "projectFilePath": "F:\\Application Developement Coursework\\Bike_Service_Center\\Bike_Service_Center\\Bike_Service_Center\\Bike_Service_Center.csproj",
+  "projectFilePath": "F:\\Application Developement Coursework\\20048321 pratik limbu\\code\\Bike_Service_Center\\Bike_Service_Center\\Bike_Service_Center\\Bike_Service_Center.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\DELL\\.nuget\\packages\\googlegson\\2.9.0.1\\googlegson.2.9.0.1.nupkg.sha512",
     "C:\\Users\\DELL\\.nuget\\packages\\microsoft.aspnetcore.authorization\\6.0.11\\microsoft.aspnetcore.authorization.6.0.11.nupkg.sha512",
@@ -132,13 +132,13 @@
     "C:\\Users\\DELL\\.nuget\\packages\\microsoft.android.runtime.31.android-x64\\32.0.476\\microsoft.android.runtime.31.android-x64.32.0.476.nupkg.sha512",
     "C:\\Users\\DELL\\.nuget\\packages\\microsoft.android.runtime.31.android-arm64\\32.0.476\\microsoft.android.runtime.31.android-arm64.32.0.476.nupkg.sha512",
     "C:\\Users\\DELL\\.nuget\\packages\\microsoft.maui.controls.runtime.android\\6.0.548\\microsoft.maui.controls.runtime.android.6.0.548.nupkg.sha512",
-    "C:\\Users\\DELL\\.nuget\\packages\\microsoft.aspnetcore.app.runtime.linux-arm\\6.0.12\\microsoft.aspnetcore.app.runtime.linux-arm.6.0.12.nupkg.sha512",
+    "C:\\Users\\DELL\\.nuget\\packages\\microsoft.aspnetcore.app.runtime.linux-arm\\6.0.13\\microsoft.aspnetcore.app.runtime.linux-arm.6.0.13.nupkg.sha512",
     "C:\\Users\\DELL\\.nuget\\packages\\microsoft.maui.core.ref.android\\6.0.548\\microsoft.maui.core.ref.android.6.0.548.nupkg.sha512",
     "C:\\Users\\DELL\\.nuget\\packages\\microsoft.android.ref.31\\32.0.476\\microsoft.android.ref.31.32.0.476.nupkg.sha512",
     "C:\\Users\\DELL\\.nuget\\packages\\microsoft.android.runtime.31.android-arm\\32.0.476\\microsoft.android.runtime.31.android-arm.32.0.476.nupkg.sha512",
     "C:\\Users\\DELL\\.nuget\\packages\\microsoft.maui.essentials.runtime.android\\6.0.548\\microsoft.maui.essentials.runtime.android.6.0.548.nupkg.sha512",
-    "C:\\Users\\DELL\\.nuget\\packages\\microsoft.aspnetcore.app.runtime.linux-arm64\\6.0.12\\microsoft.aspnetcore.app.runtime.linux-arm64.6.0.12.nupkg.sha512",
-    "C:\\Users\\DELL\\.nuget\\packages\\microsoft.aspnetcore.app.runtime.linux-x64\\6.0.12\\microsoft.aspnetcore.app.runtime.linux-x64.6.0.12.nupkg.sha512",
+    "C:\\Users\\DELL\\.nuget\\packages\\microsoft.aspnetcore.app.runtime.linux-arm64\\6.0.13\\microsoft.aspnetcore.app.runtime.linux-arm64.6.0.13.nupkg.sha512",
+    "C:\\Users\\DELL\\.nuget\\packages\\microsoft.aspnetcore.app.runtime.linux-x64\\6.0.13\\microsoft.aspnetcore.app.runtime.linux-x64.6.0.13.nupkg.sha512",
     "C:\\Users\\DELL\\.nuget\\packages\\microsoft.maui.controls.runtime.ios\\6.0.548\\microsoft.maui.controls.runtime.ios.6.0.548.nupkg.sha512",
     "C:\\Users\\DELL\\.nuget\\packages\\microsoft.maui.essentials.ref.ios\\6.0.548\\microsoft.maui.essentials.ref.ios.6.0.548.nupkg.sha512",
     "C:\\Users\\DELL\\.nuget\\packages\\microsoft.maui.core.ref.ios\\6.0.548\\microsoft.maui.core.ref.ios.6.0.548.nupkg.sha512",
@@ -154,17 +154,7 @@
     "C:\\Users\\DELL\\.nuget\\packages\\microsoft.maui.core.runtime.maccatalyst\\6.0.548\\microsoft.maui.core.runtime.maccatalyst.6.0.548.nupkg.sha512",
     "C:\\Users\\DELL\\.nuget\\packages\\microsoft.maui.controls.runtime.maccatalyst\\6.0.548\\microsoft.maui.controls.runtime.maccatalyst.6.0.548.nupkg.sha512",
     "C:\\Users\\DELL\\.nuget\\packages\\microsoft.maui.core.ref.maccatalyst\\6.0.548\\microsoft.maui.core.ref.maccatalyst.6.0.548.nupkg.sha512",
-    "C:\\Users\\DELL\\.nuget\\packages\\microsoft.maui.essentials.runtime.maccatalyst\\6.0.548\\microsoft.maui.essentials.runtime.maccatalyst.6.0.548.nupkg.sha512",
-    "C:\\Users\\DELL\\.nuget\\packages\\microsoft.maui.essentials.ref.win\\6.0.548\\microsoft.maui.essentials.ref.win.6.0.548.nupkg.sha512",
-    "C:\\Users\\DELL\\.nuget\\packages\\microsoft.maui.core.runtime.win\\6.0.548\\microsoft.maui.core.runtime.win.6.0.548.nupkg.sha512",
-    "C:\\Users\\DELL\\.nuget\\packages\\microsoft.windows.sdk.net.ref\\10.0.19041.28\\microsoft.windows.sdk.net.ref.10.0.19041.28.nupkg.sha512",
-    "C:\\Users\\DELL\\.nuget\\packages\\microsoft.aspnetcore.app.runtime.win-x64\\6.0.12\\microsoft.aspnetcore.app.runtime.win-x64.6.0.12.nupkg.sha512",
-    "C:\\Users\\DELL\\.nuget\\packages\\microsoft.maui.controls.ref.win\\6.0.548\\microsoft.maui.controls.ref.win.6.0.548.nupkg.sha512",
-    "C:\\Users\\DELL\\.nuget\\packages\\microsoft.maui.core.ref.win\\6.0.548\\microsoft.maui.core.ref.win.6.0.548.nupkg.sha512",
-    "C:\\Users\\DELL\\.nuget\\packages\\microsoft.maui.essentials.runtime.win\\6.0.548\\microsoft.maui.essentials.runtime.win.6.0.548.nupkg.sha512",
-    "C:\\Users\\DELL\\.nuget\\packages\\microsoft.windowsdesktop.app.runtime.win-x64\\6.0.12\\microsoft.windowsdesktop.app.runtime.win-x64.6.0.12.nupkg.sha512",
-    "C:\\Users\\DELL\\.nuget\\packages\\microsoft.netcore.app.runtime.win-x64\\6.0.12\\microsoft.netcore.app.runtime.win-x64.6.0.12.nupkg.sha512",
-    "C:\\Users\\DELL\\.nuget\\packages\\microsoft.maui.controls.runtime.win\\6.0.548\\microsoft.maui.controls.runtime.win.6.0.548.nupkg.sha512"
+    "C:\\Users\\DELL\\.nuget\\packages\\microsoft.maui.essentials.runtime.maccatalyst\\6.0.548\\microsoft.maui.essentials.runtime.maccatalyst.6.0.548.nupkg.sha512"
   ],
   "logs": []
 }
